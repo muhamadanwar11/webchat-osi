@@ -56,3 +56,11 @@ function appendSystem(text) {
 function escapeHtml(s) {
     return s.replaceAll('&', '&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 }
+
+app.get("/", (req, res) => {
+  res.send("Aplikasi OSI Layer kamu sudah berjalan!");
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log("Server running on port " + PORT));
+
