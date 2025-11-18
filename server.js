@@ -30,7 +30,5 @@ wss.on("connection", ws => {
     });
 });
 
-const PORT = process.env.PORT || 8080;
-server.listen(PORT, () => {
-    console.log(`Server berjalan di http://localhost:${PORT}`);
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log("Server running on port " + PORT));
